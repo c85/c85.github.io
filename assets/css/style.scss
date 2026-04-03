@@ -3,7 +3,18 @@
 
 @import "{{ site.theme }}";
 
-.site-header {
-  display: none;
-  border-bottom: none;
+.site-header,
+.site-header .wrapper,
+.site-header::after,
+.site-header::before {
+  display: none !important;
+  border: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.markdown-body h1:first-child {
+  display: none !important;
 }
