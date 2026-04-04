@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1584px;
+    height: 396px;
+    overflow: hidden;
+    background: #0F172A;
+  }
+
+  .banner {
+    position: relative;
+    width: 1584px;
+    height: 396px;
+    overflow: hidden;
+    font-family: 'Outfit', -apple-system, 'Helvetica Neue', sans-serif;
+  }
+
+  .bg-photo {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&w=1584&h=396&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Gradient: photo visible on left, fades to white on right */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(255,255,255,0) 25%,
+      rgba(255,255,255,0.80) 52%,
+      rgba(255,255,255,0.97) 70%,
+      #ffffff 85%
+    );
+  }
+
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 10px;
+    background: #EA580C;
+    z-index: 10;
+  }
+
+  .content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 100px;
+    z-index: 5;
+  }
+
+  .title {
+    font-size: 116px;
+    letter-spacing: -5px;
+    line-height: 1;
+  }
+
+  .fhir { font-weight: 700; color: #0F172A; }
+  .side { font-weight: 300; color: #EA580C; }
+
+  .analytics {
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 14px;
+    color: #94A3B8;
+    margin-top: 10px;
+    padding-right: 4px; /* compensate letter-spacing on last char */
+  }
+
+  .rule {
+    width: 520px;
+    height: 2.5px;
+    background: #EA580C;
+    opacity: 0.55;
+    margin-top: 22px;
+  }
+
+  .tagline {
+    font-size: 20px;
+    font-weight: 300;
+    color: #7090A8;
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="bg-photo"></div>
+  <div class="overlay"></div>
+  <div class="top-bar"></div>
+  <div class="content">
+    <div class="title">
+      <span class="fhir">FHIR</span><span class="side">side</span>
+    </div>
+    <div class="analytics">ANALYTICS</div>
+    <div class="rule"></div>
+    <div class="tagline">HL7 FHIR &nbsp;·&nbsp; Azure &nbsp;·&nbsp; Snowflake &nbsp;·&nbsp; Clinical Data Pipelines</div>
+  </div>
+</div>
+</body>
+</html>
